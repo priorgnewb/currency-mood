@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Курс валют</title>
+</head>
+
+<body>
+<h3>Добро пожаловать!</h3>
+
+<img th:src="@{${moodImageUrl}}" width="480" />
+<br>
+<br>
+
+<div th:switch="${moodStatus}">
+  <p th:case="'broke'">Вы стали беднее :(</p>
+  <p th:case="'rich'">Вы стали богаче!</p>
+  <p th:case="*">Добро пожаловать!</p>
+</div>
+
+</body>
+</html>
