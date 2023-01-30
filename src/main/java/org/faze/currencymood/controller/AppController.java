@@ -27,13 +27,18 @@ public class AppController {
     this.defaultCurrency = defaultCurrency;
   }
 
+  @GetMapping( {"/", ""} )
+  public String startPage() {
+    return "index";
+  }
+
   @GetMapping("/all")
   @ResponseBody
   public CurrencyResponse getLatestRates() {
     return currencyMoodService.getLatestRates();
   }
 
-  @GetMapping(  {"/", "/{inputCode}"})
+  @GetMapping("/{inputCode}")
   public String getUrlCurrencyMood(@PathVariable(name = "inputCode", required = false) Optional<String> inputCode, Model model) {
 
     String code = inputCode.orElse(defaultCurrency);
