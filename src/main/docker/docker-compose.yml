@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  curmood:
+    image: 'currency-mood:latest'
+    build:
+      context: .
+    container_name: curmood
+    ports:
+      - 8086:8086
+    restart: unless-stopped
