@@ -16,7 +16,7 @@
 • На сервис написаны тесты (для мока внешних сервисов можно использовать @MockBean или WireMock
 
 #### Nice to Have
-• Сборка и запуск Docker контейнера с этим сервисом (будет добавлено позже)
+• Сборка и запуск Docker контейнера с этим сервисом
 
 ## Инструкция по запуску в Intellij IDEA
 1. File -> New -> Project from Version control -> https://github.com/priorgnewb/currency-mood.git  
